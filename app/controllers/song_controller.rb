@@ -19,4 +19,9 @@ class SongController < ApplicationController
 
   def show
   end
+
+  private song_params
+    params.require(:song).permit(:name, :artist, :genre)
+  end
+
 end
