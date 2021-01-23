@@ -19,4 +19,9 @@ class GenreController < ApplicationController
 
   def show
   end
+
+  private genre_params
+    params.require(:genre).permit(:name, :song)
+  end
+
 end
